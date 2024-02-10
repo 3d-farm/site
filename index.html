@@ -31,7 +31,7 @@
     <meta property="og:title" content="Home">
     <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-7617"><div class="u-clearfix u-sheet u-sheet-1">
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-7617"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="224" data-image-height="224">
           <img src="images/e2353f6c-233b-7aff-b21e-c66360be4c88.jpeg" class="u-logo-image u-logo-image-1">
         </a>
@@ -191,6 +191,17 @@
             <input type="hidden" value="" name="recaptchaResponse">
             <input type="hidden" name="formServices" value="2ea53b7b-d5e1-3f0a-ce32-fa1e78abd9aa">
           </form>
+		<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyYjV00ZnpP9lPF0kmv7OqJAhsv9snbLtostbiua6KmiTbABK6q-BWhGZAUQfEDX6S4zA/exec'
+  const form = document.forms['form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
         </div>
       </div>
     </section>
