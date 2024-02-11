@@ -148,7 +148,7 @@
         <h2 class="u-custom-font u-font-merriweather u-text u-text-default u-text-1">Here you can submit your file for 3D printing</h2>
         <p class="u-text u-text-2">Simply fill in the feilds and attach your file to submit!</p>
         <div class="u-expanded-width u-form u-form-1">
-          <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="f">
+          <form action="https://script.google.com/macros/s/AKfycbyHbc24as-QH34D6A6HxNfnNP8NT4mZuSP5LbmsYKwPGrDuQ5Z9PZjF1Lhqk6QdMMkNag/exec" class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="f">
             <div class="u-form-group u-form-name">
               <label for="name-319a" class="u-label u-label-1">Your Name</label>
               <input type="text" placeholder="Enter your Name" id="name-319a" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-text-body-color" required="">
@@ -192,7 +192,7 @@
             <input type="hidden" name="formServices" value="2ea53b7b-d5e1-3f0a-ce32-fa1e78abd9aa">
           </form>
 		<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyRM5P9DoSWI_Jz08eVpZXtL7S0KFSXboVzYxWUboSByYs4VvWWkKCj0ih0J9QXPOQtHA/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyHbc24as-QH34D6A6HxNfnNP8NT4mZuSP5LbmsYKwPGrDuQ5Z9PZjF1Lhqk6QdMMkNag/exec'
   const form = document.forms['f']
 
   form.addEventListener('submit', e => {
@@ -201,6 +201,19 @@
       .then(response => console.log('Success', response))
       .catch(error => console.error('Error!', error.message))
   })
+			$('#uploadfile').on("change", function() {
+        var file = this.files[0];
+        var fr = new FileReader();
+        fr.fileName = file.name;
+        fr.onload = function(e) {
+            e.target.result
+            html = '<input type="hidden" name="data" value="' + e.target.result.replace(/^.*,/, '') + '" >';
+            html += '<input type="hidden" name="mimetype" value="' + e.target.result.match(/^.*(?=;)/)[0] + '" >';
+            html += '<input type="hidden" name="filename" value="' + e.target.fileName + '" >';
+            $("#data").empty().append(html);
+        }
+        fr.readAsDataURL(file);
+    });
 </script>
         </div>
       </div>
