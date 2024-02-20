@@ -198,7 +198,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <span style="font-size: 1.25rem; text-decoration: underline !important;">
                     <br>
                   </span>Idealy, you would use <a href="https://a.co/d/j0hbtwk">these</a> Creality build plates as they release your object at about 37C. <br>Although <a href="https://www.reddit.com/r/3Dprinting/s/lZxXM0HDAs">HERE</a> is a great solution for flexible build plates.<br>
-                  <br>A basic be clearing script for both flexible and Creality build plates can be found <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /BED_CLEARING_SCRIPT/bed_clearing.gcode<br>
+                  <br>A basic be clearing script for both flexible and Creality build plates can be found <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /BED-CLEARING-SCRIPT/bed-clearing.gcode<br>
                   <br>
                   <br>
                   <span style="text-decoration: underline !important;">
@@ -216,7 +216,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
             <div class="u-accordion-pane u-container-style u-grey-80 u-accordion-pane-3" id="df98" aria-labelledby="link-df98">
               <div class="u-container-layout u-container-layout-3">
-                <p class="u-text u-text-4">There are many ways to run a server for all your printers. We went with one computer running all of our ​octoprint instances.&nbsp;<br>Heres how:<br>-Install Ubuntu desktop on your server PC. (I recommend using 'pi' as a username for compatibility with the code)<br>-Once you've installed ubuntu, run:<br>
+                <p class="u-text u-text-4">There are many ways to run a server for all your printers. We went with one computer running all of our ​Octoprint instances.&nbsp;<br>Heres how:<br>-Install Ubuntu desktop on your server PC. (I recommend using 'pi' as a username for compatibility with the code)<br>-Once you've installed ubuntu, run:<br>
                   <span style="font-weight: 700;" class="u-text-palette-4-light-1"> sudo apt-get update&nbsp;<span style="font-weight: 400;">
                       <span class="u-text-white">and</span>&nbsp;<span style="font-weight: 700;"> sudo apt-get upgrade&nbsp;</span>
                     </span>
@@ -229,7 +229,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     <br>
                     <span style="font-weight: 700;">sudo apt-get install git-all</span>
                     <br>
-                  </span>-Lets download octoprint deploy using :<br>
+                  </span>-Lets download Octoprint_deploy using :<br>
                   <span style="font-weight: 700;" class="u-text-palette-4-light-1">git clone https://github.com/paukstelis/octoprint_deploy</span>
                   <span class="u-text-palette-4-light-1">
                     <br>
@@ -239,14 +239,14 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                     <br>
                   </span>-Select :<br>
                   <span style="font-weight: 700;" class="u-text-palette-4-light-1"> Prepare</span>
-                  <br>-You will be prompted for udev detection, select:<br>
+                  <br>-You will be prompted for UDEV detection, select:<br>
                   <br>
                   <span class="u-text-palette-4-light-1" style="font-weight: 700;">Yes</span>
                   <br>
                   <br>-To add printers, select:<br>
                   <span style="font-weight: 700;" class="u-text-palette-4-light-1"> add instance</span>
                   <br>
-                  <br>-Follow along with what it says from now on. I recommend naming your printer 1,2,3,... so you can essentially copy paste my work.<br>-If you need assistance with this step, refer to this as a source.
+                  <br>-Follow along with what it says from now on. I recommend naming your printer 1,2,3,... so you can copy paste my work.<br>-If you need assistance with this step, refer to <a href="https://github.com/paukstelis/octoprint_deploy">this</a> as a source.
                 </p>
               </div>
             </div>
@@ -297,7 +297,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   </span>
                   <br>
                   <br>You will need to paste one of those for each printer. Change the '1' in [&nbsp;1​​​&nbsp;​​] and path = /home/pi/.1/watched to the number correlating to your printers.<br>If you named your octoprint instances something other than 1,2,3... or have a different username than 'pi'. If thats the case simply change:<br>path = /home/[your username]/.[instance name]/watched.&nbsp;<br>
-                  <br>HERE under /SambaServerData/smb_conf.txt is a setup for printers 1-12 and a username 'pi'<br>
+                  <br><a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /SambaServerData/smb_conf.txt is a setup for printers 1-12 and a username 'pi'<br>
                 </p>
                 <img class="u-expanded-width u-image u-image-default u-image-1" src="images/TakingOwnershipOfOctoFiles-Copy.png" alt="" data-image-width="780" data-image-height="216">
                 <p class="u-text u-text-custom-color-1 u-text-6">This is the directory we need to take ownership&nbsp; from. If you do "ls -l" you will see 'root' currently owns it​.</p>
