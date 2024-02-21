@@ -429,7 +429,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
             <div class="u-accordion-pane u-container-style u-grey-80 u-accordion-pane-8" id="71f4" aria-labelledby="link-71f4">
               <div class="u-container-layout u-container-layout-8">
-                <p class="u-text u-text-12">In this step, we will create and format a Google spreadsheet to our liking.<br> -Firstly, create a new google spreadsheet. Give it a name.<br>-Next create a new sheet in the spreadsheet, keep the names of the sheets sheet1 and sheet2 respectivaly.<br>-In sheet1 in the headers, label them in this order: A(Name), B(Email), C(Colour),D(File),E(file.txt)<br>-In sheet2 in the headers, label them in this order:A(timestamp_incoming_webhook), B(topic), C(deviceIdentifier), D(extra), M(Name.gcode), N(state of printer), O(Name.stl), P(row in test), Q(time(normal)<br>-It's better to copy/paste the contents of the brackets to their respective header to insure it works.&nbsp;&nbsp;<br>
+                <p class="u-text u-text-12">In this step, we will create and format a Google spreadsheet to our liking.<br> -Firstly, create a new google spreadsheet. Give it a name.<br>-Next create a new sheet in the spreadsheet, keep the names of the sheets sheet1 and sheet2, respectively.<br>-In sheet1 in the headers, label them in this order: A(Name), B(Email), C(Colour),D(File),E(file.txt)<br>-In sheet2 in the headers, label them in this order:A(timestamp_incoming_webhook), B(topic), C(deviceIdentifier), D(extra), M(Name.gcode), N(state of printer), O(Name.stl), P(row in test), Q(time(normal)<br>-It's better to copy/paste the contents of the brackets to their respective header to insure it works.&nbsp;&nbsp;<br>
                 </p>
                 <img class="u-expanded-width u-image u-image-default u-image-7" src="images/SpreadSheetconfig.png" alt="" data-image-width="1629" data-image-height="1080">
               </div>
@@ -442,7 +442,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
             <div class="u-accordion-pane u-container-style u-grey-80 u-accordion-pane-9" id="71f4" aria-labelledby="link-71f4">
               <div class="u-container-layout u-container-layout-9">
-                <p class="u-text u-text-13">To get status updates on your printer, we will get webhooks and put them in your spreadsheet. To do this, we will use a plugin called webhook for sheets.&nbsp;<br>In your spreadsheet, navigate to the extentions-&gt;add-ons-&gt;get add-on-&gt;search "webhooks for sheets"<br>-Once you find it, install it.<br>
+                <p class="u-text u-text-13">To get status updates on your printer, we will get webhooks and put them in your spreadsheet. To do this, we will use a plugin called webhook for sheets.&nbsp;<br>In your spreadsheet, navigate to the extensions-&gt;add-ons-&gt;get add-on-&gt;search "webhooks for sheets"<br>-Once you find it, install it.<br>
                   <br>
                   <br>
                   <br>
@@ -466,13 +466,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
             <div class="u-accordion-pane u-container-style u-grey-80 u-accordion-pane-10" id="71f4" aria-labelledby="link-71f4">
               <div class="u-container-layout u-container-layout-10">
-                <p class="u-text u-text-14">For simplicity sake, we will create a web app using apps scripts.<br>
+                <p class="u-text u-text-14">For simplicity's sake, we will create a web app using apps scripts.<br>
                   <br>
-                  <br>-Start on your spreadsheet, navigate to your extentions-&gt;apps scripts<br>
+                  <br>-Start on your spreadsheet, navigate to your extensions-&gt;apps scripts<br>
                   <br>-Name your new project.<br>
-                  <br>-Go HERE under /apps-scripts/code_gs.txt and paste the contents to your code.gs in apps scripts.<br>
+                  <br>-Go <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /Google-scripts/code_gs.txt and paste the contents to your code.gs in apps scripts.<br>
                   <br>-Now in apps scripts, create a new html by clicking the + -&gt;html. Name if 'form'.<br>
-                  <br>-Go HERE under /apps-scripts/form_html.txt and paste it's contents to form.html in apps scripts.<br>
+                  <br>-Go <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /Google-scripts/form_html.txt and paste it's contents to form.html in apps scripts.<br>
                   <br>
                   <br>
                   <br>Now deploy the web app<br>
@@ -508,12 +508,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
             <div class="u-accordion-pane u-container-style u-grey-80 u-accordion-pane-11" id="71f4" aria-labelledby="link-71f4">
               <div class="u-container-layout u-container-layout-11">
-                <p class="u-text u-text-15">We hav​e now set up the form to receive files, the PC will now open files in the slicer once the file is received, once you save your sliced file, it will queue and send it to an available printer via octoprint, octoprint returns a webhook on printer start and whens it's done.&nbsp;<br>Now we need to take these webhooks and notify the system the printer is currently printing and cannot receive anymore file until it receives a 'done' webhook.<br>
+                <p class="u-text u-text-15">We hav​e now set up the form to receive files, the PC will now open files in the slicer once the file is received, once you save your sliced file, it will queue and send it to an available printer via octoprint, octoprint returns a webhook on printer start and when it's done.&nbsp;<br>Now we need to take these webhooks and notify the system the printer is currently printing and cannot receive anymore file until it receives a 'done' webhook.<br>
                   <br>-Start on your spreadsheet, extentions-&gt;apps-script and create a new project again.<br>
                   <br>-Name the project 'webhook Receive'<br>
-                  <br>-Now go HERE and copy the contents under /apps-scripts/webhook-received_gs.txt<br>
+                  <br>-Now go <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> and copy the contents under /Google-scripts/webhook-received_gs.txt<br>
                   <br>-Paste in your new project in code.gs.<br>
-                  <br>-Now  on the left menu, navigate to triggers-&gt;add trigger. Under 'Choose which function to run' select 'getHook' , under 'select event source' select 'time-driven' under 'Select type of time based trigger' select 'minute timers' and under 'Select minute interval' select 'every minute'-&gt; SAVE<br>
+                  <br>-Now on the left menu, navigate to triggers-&gt;add trigger. Under 'Choose which function to run' select 'getHook' , under 'select event source' select 'time-driven' under 'Select type of time based trigger' select 'minute timers' and under 'Select minute interval' select 'every minute'-&gt; SAVE<br>
                   <br>Simple!
                 </p>
               </div>
@@ -530,13 +530,13 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                   <br>
                   <span style="font-size: 1.5rem;">Configuring colour</span>
                   <br>Your printer may have up to 4 different colours, you can pick which octoprint instance receives what colour with the config.txt file in the google drive. You may also disable printers there and plug in your servers IP addresse<br>
-                  <br>Note: octoprint instances may change printers after restarting. if you have many colours, sending your file to octoprint instance 1 doesn't mean it's being sent to printer 1. After every restart, it is recommended to many sure each printer is connected to it's respected instance.&nbsp;<br>
+                  <br>Note: octoprint instances may change printers after restarting. If you have many colours, sending your file to octoprint instance 1 doesn't mean it's being sent to printer 1. After every restart, it is recommended to make sure each printer is connected to it's respected instance.&nbsp;<br>
                   <br>
                   <br>
                   <br>
                   <span style="font-size: 1.5rem;"> On farm startup or restart or power outage or whatever</span>
-                  <br>When you wish to start the farm, there are 2 components that you must make sure are running. Firstly, your server must be running, connected to the internet with a static IP.&nbsp;<br>Secondly, your main PC must be running it's powershell scripts. There are 2 scripts, one that will detect oncoming files on form received and another to detect sliced files and queue and send to printers.&nbsp;<br>To start them simply open two windows powershell tabs, click HERE and paste the contents of '/DATA/gcode.ps1' in one tab and the contents of /DATA/stl.ps1 in the other.<br>
-                  <br>If you encounter any issues, refer to my trouble shooting guide HERE under /HELP/guide.doc or contact me throught the message stream below.<br>
+                  <br>When you wish to start the farm, there are 2 components that you must make sure are running. Firstly, your server must be running, connected to the internet with a static IP.&nbsp;<br>Secondly, your main PC must be running it's PowerShell scripts. There are 2 scripts, one that will detect oncoming files on form received and another to detect sliced files and queue and send to printers.&nbsp;<br>To start them simply open two windows PowerShell tabs, click <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> and paste the contents of '/automation/gcode.ps1' in one tab and the contents of /automation/stl.ps1 in the other.<br>
+                  <br>If you encounter any issues, refer to my trouble shooting guide <a href="https://drive.google.com/drive/u/2/folders/1lV68PbWfP9Oy_CBipVOvUNiyhC53DGuN">HERE</a> under /HELP/guide.doc or contact me through the message stream below.<br>
                   <br>Good luck!
                 </p>
               </div>
