@@ -2429,6 +2429,7 @@ a {
 }
 .u-form .u-btn-submit,
 .u-form .u-btn-step {
+  transition-duration: 0.4s;
   margin-top: 1px;
   margin-bottom: 1px;
   position: relative;
