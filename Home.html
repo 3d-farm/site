@@ -266,7 +266,9 @@ height: 65px;
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success', response))
+	    .then(document.querySelector('input[name="submitbutton"]').value = "Thank you!");
       .catch(error => console.error('Error!', error.message))
+	  
   })
 	// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
     let url = "https://script.google.com/macros/s/AKfycbyN_9ta6tW3fG9uvlDbUqm3glcNYyq67LAa2wNqIOl2CLLV6_aO_4R8E6QdISUIO8FkOQ/exec";
@@ -301,7 +303,7 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>console.log(data))
-	.then(document.querySelector('input[name="submitbutton"]').value = "Thank you!");
+	
  
         })
         // This line reads the selected file as a data URL
