@@ -266,7 +266,6 @@ height: 65px;
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success', response))
-      .then(document.querySelector('input[name="submitbutton"]').value = "Thank you!")
       .catch(error => console.error('Error!', error.message))
 	  
   })
@@ -302,7 +301,7 @@ height: 65px;
             // This line waits for the response from the server and converts it to text
             .then(r=>r.text())
             // This line logs the response data to the console
-            .then(data=>(document.querySelector('input[name="submitbutton"]').value = data)
+            .then(data=>(document.querySelector('input[name="submitbutton"]')).value = data)
 	
  
         })
