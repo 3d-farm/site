@@ -303,7 +303,7 @@ height: 65px;
             // This line logs the response data to the console
             .then(data=>(document.querySelector('input[name="submitbutton"]')).value = data)
 		if(data == "File uploaded!"){
-			.then(data=>(document.querySelector('input[name="submitbutton"]')).value = "Thank you!")
+	         document.querySelector('input[name="submitbutton"]').value = "Thank you!"
 		}
         })
         // This line reads the selected file as a data URL
