@@ -266,7 +266,7 @@ height: 65px;
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success', response))
-	    .then(document.querySelector('input[name="submitbutton"]').value = "Thank you!");
+      .then(document.querySelector('input[name="submitbutton"]').value = "Thank you!")
       .catch(error => console.error('Error!', error.message))
 	  
   })
