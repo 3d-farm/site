@@ -270,7 +270,7 @@ height: 65px;
 	  
   })
 	// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
-    let url = "https://script.google.com/macros/s/AKfycbyN_9ta6tW3fG9uvlDbUqm3glcNYyq67LAa2wNqIOl2CLLV6_aO_4R8E6QdISUIO8FkOQ/exec";
+    let url = "https://script.google.com/macros/s/AKfycbwHO70WTGvCI6BEg8dVRWfwCE3k_4TMvbkFQR8oVTgCaI1JKZlwwshoWMnaR8koSxvnSQ/exec";
     // This line declares a variable called "file" and assigns it the value of the first input element on the page
     let file = document.querySelector('input[name="text"]');
     // This line declares a variable called "img" and assigns it the value of the first image element on the page
@@ -302,16 +302,6 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>(document.querySelector('input[name="submitbutton"]')).value = data)
-		if(data = "file uploaded"){
-			setTimeout(2000)
-			let data = "Thank you!"
-		}
-		if(data = "Thank you!"){
-			setTimeout(2000)
-			let data = "Please refresh the page"
-		}
-	
- 
         })
         // This line reads the selected file as a data URL
         fr.readAsDataURL(file.files[0])
