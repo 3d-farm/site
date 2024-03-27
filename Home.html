@@ -302,6 +302,14 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>(document.querySelector('input[name="submitbutton"]')).value = data)
+		if(data = "File uploaded!"){
+			sleep(2000)
+			let data = "Thank you!"
+		}
+		if(data = "Thank you!"){
+			sleep(2000)
+			let data = "Please refresh the page"
+		}
 	
  
         })
