@@ -301,7 +301,11 @@ height: 65px;
             // This line waits for the response from the server and converts it to text
             .then(r=>r.text())
             // This line logs the response data to the console
-            .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
+            .then(data=> 
+		 function(test){ 
+			 document.querySelector('input[name="submitbutton"]').value = data
+		 }
+		 )
 		
 	          document.querySelector('input[name="submitbutton"]').value = "test"
 		
