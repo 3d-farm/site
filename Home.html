@@ -253,7 +253,7 @@ height: 65px;
                   <input type="submit" value="Submit!" name="submitbutton" id="submit" class="submitbutton button button1">
 		  </div>
 
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your request has been processed. Please refresh the page if you wish to submit multiple request. </div>
+            <div class="button button1"> Please refresh page before submitting more files </div>
             <div class="u-form-send-error u-form-send-message"> Unable to send your model. Please try again later. </div>
             <input type="hidden" value="" name="recaptchaResponse">
             <input type="hidden" name="formServices" value="2ea53b7b-d5e1-3f0a-ce32-fa1e78abd9aa">
@@ -301,14 +301,9 @@ height: 65px;
             // This line waits for the response from the server and converts it to text
             .then(r=>r.text())
             // This line logs the response data to the console
-            .then(data=> 
+            .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
 		 
-			 document.querySelector('input[name="submitbutton"]').value = data
-		         setTimeout(2000)
-		         document.querySelector('input[name="submitbutton"]').value = "Thank you!"
-		 
-		 )
-		
+	
 	         
 		
         })
