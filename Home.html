@@ -302,7 +302,7 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
-		If(document.querySelector('input[name="submitbutton"]').value == "File uploaded!"){
+		if (document.querySelector('input[name="submitbutton"]').value == "File uploaded!") {
 	         document.querySelector('input[name="submitbutton"]').value = "Thank you!"
 		}
         })
