@@ -250,7 +250,7 @@ height: 65px;
             </div>
 
                   <div align="center">
-                  <input type="submit" value="Submit!" name="submitbutton" class="submitbutton button button1">
+                  <input type="submit" value="Submit!" name="submitbutton" id="submit" class="submitbutton button button1">
 		  </div>
 
             <div class="u-form-send-message u-form-send-success"> Thank you! Your request has been processed. Please refresh the page if you wish to submit multiple request. </div>
@@ -303,7 +303,7 @@ height: 65px;
             // This line logs the response data to the console
             .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
 		if (document.querySelector('input[name="submitbutton"]').value == "File uploaded!") {
-	         .then(document.querySelector('input[name="submitbutton"]').value = "Thank you!")
+	          document.getElementById("submit").setAttribute('value','Thank you!');
 		}
         })
         // This line reads the selected file as a data URL
