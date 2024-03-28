@@ -301,7 +301,7 @@ height: 65px;
             // This line waits for the response from the server and converts it to text
             .then(r=>r.text())
             // This line logs the response data to the console
-            .then(data=>(document.querySelector('input[name="submitbutton"]')).value = data)
+            .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
 		If(document.querySelector('input[name="submitbutton"]')).value == "File uploaded!"){
 	         document.querySelector('input[name="submitbutton"]').value = "Thank you!"
 		}
