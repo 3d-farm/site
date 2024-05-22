@@ -223,7 +223,9 @@ height: 65px;
 		
 			  </div>
           </form>
+		    <div align="center">
 		    <div id="loader" class="loader"></div>
+		    </div>
 		<script>
   document.getElementById("loader").style.display = "none"
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwGCyyOH64FCnOMF2lspompQ6pBZbD1OSwPYF1Vtupgaa97o2a9cZNh_aDQBAnRFPXDNA/exec'
@@ -269,7 +271,7 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
-	    .then(document.getElementById("loader").style.display = "none";) 
+	    .then(document.getElementById("loader").style.display = "none") 
 	
 	         
 		
