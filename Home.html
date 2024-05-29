@@ -29,6 +29,24 @@
 		"url": "/"
 }</script>
 	<style>
+		.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .button {
   border: none;
   color: white;
@@ -167,7 +185,7 @@ height: 65px;
         <div class="u-container-style u-expanded-width u-grey-15 u-group u-radius u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <div class="u-expanded-width u-form u-form-radios-spacing-83 u-form-1">
-                  <form class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form" style="padding: 10px" id="form" source="email" name="form" onsubmit="submitbutton.value='Please be patient while your file is uploading..'">
+                  <form class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form" style="padding: 10px" id="form" source="email" name="form" onsubmit="document.getElementById('loader').style.display = 'block'; submitbutton.value='Please be patient while your file is uploading..'">
             <div class="u-form-group u-form-name">
               <label for="name-319a" class="u-custom-font u-font-courier-new u-label u-label-1">Your Name</label>
               <input type="text" placeholder="Enter your Name" id="name-319a" name="name" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-radius u-text-body-color u-input-1" required="">
@@ -200,12 +218,17 @@ height: 65px;
 
                   <div align="center">
                   <input type="submit" value="Submit!" name="submitbutton" id="submit" class="submitbutton button button1">
-		  </div>
             <input type="hidden" value="" name="recaptchaResponse">
             <input type="hidden" name="formServices" value="Please refresh page">
+		
+			  </div>
           </form>
+		    <div align="center">
+		    <div id="loader" class="loader"></div>
+		    </div>
 		<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyARZswO6TkMwpCvrxghLLatV3c2ysbOyMpjHD7VqQjOhRYln62jjOM9oTf5eq1vPrIyQ/exec'
+  document.getElementById("loader").style.display = "none"
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwGCyyOH64FCnOMF2lspompQ6pBZbD1OSwPYF1Vtupgaa97o2a9cZNh_aDQBAnRFPXDNA/exec'
   const form = document.forms['form']
 
   form.addEventListener('submit', e => {
@@ -216,7 +239,7 @@ height: 65px;
 	  
   })
 	// This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
-    let url = "https://script.google.com/macros/s/AKfycbz6PPVQYJSGGQgxY2LO9BHJDNvHf75ifnhTb6PmULQUjqSK0AABfS8jM0ZsvtvDj0FBdQ/exec";
+    let url = "https://script.google.com/macros/s/AKfycbyrf1yDdgHtofmnwm4s5wUMj2l6K8BHYgy09__BNO_T2faOZi1VDaAahBM4SBJl1SXkbQ/exec";
     // This line declares a variable called "file" and assigns it the value of the first input element on the page
     let file = document.querySelector('input[name="text"]');
     // This line declares a variable called "img" and assigns it the value of the first image element on the page
@@ -248,7 +271,7 @@ height: 65px;
             .then(r=>r.text())
             // This line logs the response data to the console
             .then(data=>document.querySelector('input[name="submitbutton"]').value = data)
-		 
+	    .then(document.getElementById("loader").style.display = "none") 
 	
 	         
 		
